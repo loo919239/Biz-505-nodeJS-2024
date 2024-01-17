@@ -2,14 +2,21 @@ extends ../layout
 
 block content 
     link(rel="stylesheet", href="/css/list.css")
-    script(src ="")
+    script(src="/js/list.js")
     h1.studnet 학생정보
     table.student.list 
         thead 
             tr
+                th Seq
                 th 학번
                 th 이름
                 th 학과
+        tbody 
+            each item,index in stList 
+                tr
+                    td #{index+1}
+                    td= item.st_num
+                    td= item.st_name
+                    td= item.st_dept
     div.studnet.btn_box
-        button 
             a(href="/student/insert") 학생정보 추가
