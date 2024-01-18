@@ -107,6 +107,7 @@ router.get("/:st_num/delete", (req, res) => {
   });
 });
 
+// localhost:3000/student/학번/update
 router.get("/:st_num/update", (req, res) => {
   const st_num = req.params.st_num;
   const sql = " SELECT * FROM tbl_student WHERE st_num = ?";
@@ -115,6 +116,26 @@ router.get("/:st_num/update", (req, res) => {
       return res.json(err);
     } else {
       return res.render("student/input", { STD: result[0] });
+    }
+  });
+});
+
+router.post("/:st_num/update", (req, res) => {
+  const st_name = req.body.st_name;
+  const st_dept = req.body.st_dept;
+  const st_grade = req.body.st_grade;
+  const st_tel = req.body.st_tel;
+  const st_addr = req.body.st_addr;
+  const st_num = req.params.st_num;
+
+  const params = [st_name, st_dept, st_grade, st_tel, st_addr, st_num];
+  const sql =
+    " UPDATE tbl_student " + " SET st_name = ?, " + " st_dept = ?, " + " st_grade = ?, " + " st_tel = ?, " + " st_addr = ? " + " WHERE st_num = ? ";
+  dbConn.query(sql, params, (err, result) => {
+    if (err) {
+      return res.json(err);
+    } else {
+      return res.redirect(`/student/${st_num}/detail`);
     }
   });
 });
