@@ -1,0 +1,28 @@
+extends ../layout 
+
+block content 
+    link(rel="stylesheet", href="/css/detail.css")
+    script(src="/js/detail.js")
+    h3.student 학생정보 상세보기
+    div
+        strong 학번
+        span= STD.st_num
+    div
+        strong 이름
+        span= STD.st_name
+    div
+        strong 학과
+        span= STD.st_dept
+    div
+        strong 학년
+        span= STD.st_grade
+    div
+        strong 전화번호
+        span= STD.st_tel
+    div
+        strong 주소
+        span= STD.st_addr
+    .btn_box 
+        button.btn_list 리스트로
+        button.btn_update 수정
+        button.btn_delete(data-num=`${STD.st_num}`) 삭제
