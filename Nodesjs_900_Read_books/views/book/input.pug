@@ -1,0 +1,28 @@
+extends ../layout 
+block content 
+    link(rel="stylesheet", href="/css/input.css")
+    script(src="/js/input.js")
+    form.book.input(method="POST")
+        div.input.main
+            div.line
+                input#b_isbn(placeholder="ISBN" name = "isbn")
+                div.publisher
+                    input#b_publisher(placeholder="출판사" name = "publisher")
+                    input#b_author(placeholder="저자" name = "author")
+                    input#b_translator(placeholder="역자")
+                div.publish
+                    input#b_pubdate(placeholder="발행일" name = "pubdate")
+                    input#b_page(placeholder="페이지")
+            
+            div.line
+                input#b_title(placeholder="도서명" name = "title")
+                div.price
+                    input#b_price(placeholder="가격" name = "price")
+                    input#b_discount(placeholder="할인가" name = "discount")
+                input#b_description(placeholder="메모" name = "description")
+
+        .btn_box 
+            button(type="button") 저장
+        //-     button.btn_update 저장
+        //-     button.btn_new 새로작성
+        //-     button.btn_list 리스트보기 

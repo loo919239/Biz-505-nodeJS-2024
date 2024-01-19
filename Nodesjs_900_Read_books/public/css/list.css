@@ -1,0 +1,36 @@
+table {
+  margin: 1rem auto;
+  width: 80%;
+  padding: 1rem;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 10px;
+  background-color: #ddd;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+td {
+  padding: 10px;
+  background-color: #eee;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  color: black;
+}
+
+.btn_box {
+  width: 80%;
+  margin: 10px auto;
+  text-align: right;
+}
+
+.btn_box a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #777;
+  color: white;
+  border: 1px solid none;
+  border-radius: 6px;
+}

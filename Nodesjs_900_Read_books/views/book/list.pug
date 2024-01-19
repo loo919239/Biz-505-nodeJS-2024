@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+    link(rel="stylesheet", href="css/list.css")
+    script(src="js/list.js") 
+    table.book.list 
+        thead 
+            tr
+                th No.
+                th ISBN
+                th 도서명
+                th 저자
+                th 출판사
+                th 가격
+                th 할인가
+        tdbody 
+            each item,index in bookList 
+                tr 
+                    td #{index+1}
+                    td= item.b_isbn 
+                    td= item.b_title
+                    td= item.b_author
+                    td= item.b_publisher 
+                    td= item.b_price
+                    td= item.b_discount
+    .book.btn_box 
+        a(href="/book/insert") 도서등록 

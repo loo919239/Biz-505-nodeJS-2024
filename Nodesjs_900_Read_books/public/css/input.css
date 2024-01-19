@@ -1,0 +1,31 @@
+.input.main {
+  width: 80%;
+  display: flex;
+  margin: 10px auto;
+}
+
+.line {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.publisher input,
+.publish input,
+.price input {
+  display: flex;
+}
+
+input {
+  flex: 1;
+  float: left;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.btn_box {
+  width: 80%;
+  margin: 10px auto;
+  text-align: right;
+}

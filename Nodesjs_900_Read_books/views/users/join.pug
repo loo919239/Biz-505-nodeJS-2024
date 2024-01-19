@@ -1,0 +1,11 @@
+extends ../layout 
+block content 
+    link(rel="stylesheet", href="css/join.css")
+    form.join(method="POST")
+        div.input
+            input(placeholder="회원 ID")
+            input(placeholder="비밀번호")
+            input(placeholder="비밀번호 확인")
+            input(placeholder="Email")
+            input(placeholder="회원 이름")
+            button 회원가입
