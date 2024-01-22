@@ -15,6 +15,17 @@
 
 - `npm install -g express-21c`
 
-## express framwork 프로젝트 생성
+## express 프로젝트 생성도구 upgrade
+
+- `npm uninstall -g express-21c` : 기존 도구 제거
+- `npm install -g express-21c` : 새 버전을 설치
+
+## express framwork 프로젝트 생성을 로컬도구를 사용하여 실행하기
 
 - `express 프로젝트명`
+- `exress-21c` 가 upgrade 되었을때 매번 재거 설치를 해주어야 한다
+
+## express 프로젝트 생성도구를 원격으로 실행하기
+
+- `express-21c`를 로컬에 설치하지 않고, 사용할때 원격의 패키지를 호출하여 사용하는 방법
+- `npx express-21c 프로젝트명`
