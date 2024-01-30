@@ -113,5 +113,6 @@ FLUSH PRIVILEGES;
 -- 기존에 부여된 권한 회수하기
 REVOKE ALL PRIVILEGES ON *.* from 'loo919239'@'localhost';
 
-USE bookdb2
-DROP tbl_books
+USE bookdb2;
+DROP TABLE tbl_books;
+DESC tbl_books;
