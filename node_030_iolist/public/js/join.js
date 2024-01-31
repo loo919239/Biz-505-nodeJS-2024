@@ -5,12 +5,14 @@ const join_btn_click_event = async () => {
   const re_password = Join_form.querySelector("#re_password");
   const realname = Join_form.querySelector("#realname");
   const tel = Join_form.querySelector("#tel");
-
   if (userid.value === "") {
     alert("사용자의 ID를 입력해야 합니다");
     userid.select();
     return false;
   } else {
+    /**
+     * async 방식으로 server 에 userid check 요청
+     */
     const response = await fetch(`/users/${userid.value}/check`);
     const json = await response.json();
     if (json.MESSAGE === "FOUND") {
