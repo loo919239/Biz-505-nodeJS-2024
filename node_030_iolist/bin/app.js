@@ -12,7 +12,7 @@ import createError from "http-errors";
 import path from "path";
 import helmet from "helmet";
 // session 도구 import
-import Session from "express-session";
+import session from "express-session";
 
 // 3rd party lib modules
 import cookieParser from "cookie-parser";
@@ -24,7 +24,6 @@ import DB from "../models/index.js";
 // import router modules
 import indexRouter from "../routes/index.js";
 import usersRouter from "../routes/users.js";
-import session from "express-session";
 import iolistRouter from "../routes/iolist.js";
 import productRouter from "../routes/product.js";
 
