@@ -1,0 +1,25 @@
+extends ../layout 
+block content 
+    link(rel="stylesheet", href="/css/add.css")
+    script(src="/js/add.js")
+    h2 상품 입력
+    div.input
+        strong 상품코드
+            input(type="text")
+        strong 상품 이름
+            input(type="text")
+    div.input    
+        strong 품목
+            input(type="text")
+        strong 규격
+            input(type="text")
+    div.input
+        strong 매입단가
+            input(type="text")
+        strong 매출단가
+            input(type="text")
+    div.box 
+        img(src="/images/add.png", alt="", width= "100px")
+    div.input
+        button.input 입력
+        button.cancel 취소
