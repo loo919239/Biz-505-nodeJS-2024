@@ -21,6 +21,11 @@ p_quan	INT	NOT NULL	,
 p_date	VARCHAR(12)	NOT NULL	,
 p_memo	VARCHAR(125)			
 );
+-- 오늘 날짜에 10일전부터 임의의 날짜에 상품 구매
+-- 유통기한 : 구입일로 부터 5~ 15 범위의
+-- 임의의 날짜로 생성
+SELECT count(*) FROM tbl_product;
+SELECT * FROM tbl_product;
 
 CREATE TABLE tbl_shopping (
 s_seq	INT	AUTO_INCREMENT	PRIMARY KEY,

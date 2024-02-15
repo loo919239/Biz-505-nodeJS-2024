@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  link(rel="stylesheet", href="/css/memo.css")
+  link(rel="stylesheet", href="/css/add.css")
+  script(src="/js/add.js")
+  form.image(method="POST", enctype="multipart/form-data")  
+    body.main
+      h1 오늘은 내 생의 가장 젊은날
+      div.main
+        div.image
+          input.seq(type="text", placeholder="번호", name="m_seq")
+          input.title(type="text", placeholder="제목을 입력하세요", name="m_author")
+          input.memo(type="text", placeholder="내용을 입력하세요", name="m_memo")
+        div.img_box 
+            img.img_add(src="/images/add.png",width="100px",height="100px", alt="추가아이콘") 
+            input(type="file", name="p_image", accept="image/*",id="p_image")
+        div.btn_box 
+            input(type="submit",value="저장하기")
+            input(type="reset",value="새로작성")

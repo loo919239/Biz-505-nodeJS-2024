@@ -1,0 +1,25 @@
+body.main {
+  text-align: center;
+}
+
+h1 {
+  border: 1px solid #ddd;
+  width: 90%;
+  margin: 5px auto;
+  padding: 7px 0;
+}
+div.list {
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+div.list span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  padding: 10px 0;
+  margin: 10px auto;
+  cursor: pointer;
+}

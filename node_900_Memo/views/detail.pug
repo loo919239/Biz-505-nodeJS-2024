@@ -1,0 +1,19 @@
+extends /layout
+block content 
+    table.detail.iolist
+        tr
+            th 번호
+            th 제목
+            th 날짜
+            th 시간
+            th 메모
+            th 사진
+
+            each item in Memolist
+                tr
+                    td= item.m_seq
+                    td= item.m_author
+                    td= item.m_date
+                    td= item.m_time
+                    td= item.m_memo
+                    td
