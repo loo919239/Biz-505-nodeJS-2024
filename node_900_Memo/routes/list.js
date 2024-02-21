@@ -11,7 +11,7 @@ const router = express.Router();
 router.get("/", async (req, res, next) => {
   const today = moment().format("YYYY-MM-DD");
   const time = moment().format("HH:mm:ss");
-  const sql = "SELECT * FROM tbl_memo ";
+  const sql = "SELECT * FROM tbl_memos ";
   dbConn.query(sql, (err, result) => {
     if (err) {
       return res.json(err);

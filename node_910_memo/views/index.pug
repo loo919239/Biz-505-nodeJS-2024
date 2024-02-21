@@ -13,9 +13,9 @@ block content
         each MEMO in MEMOS
           li.memo.list(data-seq=`${MEMO.m_seq}`) 
             if MEMO.m_image
-              img.memo.item(src=`/images/${MEMO.m_image}`, alt="", width="20px") 
+              img.memo.item(src=`/images/${MEMO.m_image}`, alt="", width="20px", height="20px") 
             else
-              img.memo.item(src="/images/noimage.svg", alt="", width="20px") 
+              img.memo.item(src="/images/noimage.svg", alt="", width="20px", height="20px") 
             span.memo.item= MEMO.m_subject
     div.aside
       form.input(method="POST",enctype="multipart/form-data") 

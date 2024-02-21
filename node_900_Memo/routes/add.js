@@ -4,7 +4,7 @@ import { upLoad } from "../modules/file_upload.js";
 import moment from "moment";
 
 const router = express.Router();
-const MEMO = DB.models.tbl_memo;
+const MEMO = DB.models.tbl_memos;
 
 /* GET home page. */
 router.get("/", async (req, res, next) => {

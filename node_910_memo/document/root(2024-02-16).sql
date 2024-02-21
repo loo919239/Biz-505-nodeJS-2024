@@ -5,7 +5,7 @@ CREATE DATABASE memoDB;
 use memodb;
 DROP TABLE tbl_memos;
 CREATE TABLE tbl_memos(
-	m_seq		BIGINT		PRIMARY KEY	,
+	m_seq		BIGINT		PRIMARY KEY AUTO_INCREMENT	,
 	m_author	VARCHAR(25)		NOT NULL,	
 	m_date		VARCHAR(10)		NOT NULL,
 	m_time		VARCHAR(10)		NOT NULL,

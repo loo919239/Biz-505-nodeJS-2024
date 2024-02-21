@@ -1,7 +1,7 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class tbl_memo extends Model {
+export default class tbl_memos extends Model {
   static init(sequelize, DataTypes) {
   return super.init({
     m_seq: {
@@ -15,14 +15,18 @@ export default class tbl_memo extends Model {
     },
     m_date: {
       type: DataTypes.STRING(10),
-      allowNull: true
+      allowNull: false
     },
     m_time: {
       type: DataTypes.STRING(10),
-      allowNull: true
+      allowNull: false
+    },
+    m_subject: {
+      type: DataTypes.STRING(50),
+      allowNull: false
     },
     m_memo: {
-      type: DataTypes.STRING(40),
+      type: DataTypes.STRING(400),
       allowNull: false
     },
     m_image: {
@@ -31,7 +35,7 @@ export default class tbl_memo extends Model {
     }
   }, {
     sequelize,
-    tableName: 'tbl_memo',
+    tableName: 'tbl_memos',
     timestamps: false,
     indexes: [
       {

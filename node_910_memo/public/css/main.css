@@ -18,23 +18,32 @@ a {
   text-decoration: none;
 }
 
+section {
+  height: auto;
+}
+
 header,
-footer,
 section.main {
-  width: 60%;
+  width: 70%;
   margin: 10px auto;
 }
 
 header {
-  border: 1px solid #ddd;
+  border: 1px solid orange;
+  border-radius: 30px;
   padding: 0.7rem;
   margin-top: 20px;
   font-weight: bold;
+  color: orange;
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
   text-align: center;
-  background-color: #7ba7ff;
+  background-color: orange;
   color: white;
   padding: 0.3rem;
 }

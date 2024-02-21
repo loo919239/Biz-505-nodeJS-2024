@@ -7,7 +7,7 @@ div.aside {
   /* max-width: 50%; */
   padding: 1rem;
   &:nth-of-type(1) {
-    border-right: 1px solid #ddd;
+    border-right: 1px solid orange;
   }
 }
 
@@ -17,11 +17,15 @@ form.date {
     width: 100%;
     padding: 5px;
     margin: 0 3px;
+    border: 1px solid orange;
+    border-radius: 2px;
     &:nth-of-type(1) {
       margin-left: 0;
     }
     &:nth-last-of-type(1) {
       margin-right: 0;
+      background-color: orange;
+      color: white;
     }
   }
 }
@@ -29,7 +33,10 @@ form.date {
 ul {
   list-style: none;
   li {
-    box-shadow: 2px 2px 2px 2px #ddd, 2px 2px 2px 2px #aaa;
+    border: 1px solid orange;
+    border-bottom: 3px solid orange;
+    font-weight: bold;
+    color: #808080;
     margin: 10px 0;
     padding: 5px;
     /*
@@ -42,7 +49,7 @@ ul {
       margin: 6px 5px -3px 5px;
     }
     &:hover {
-      background-color: #ddd;
+      background-color: rgba(255, 166, 0, 0.2);
       cursor: pointer;
     }
   }
@@ -53,6 +60,8 @@ form.input {
   flex-direction: column;
   align-items: center;
   input {
+    border: 1px solid orange;
+    border-radius: 2px;
     width: 100%;
     padding: 5px;
     margin: 3px 0;
@@ -60,12 +69,18 @@ form.input {
       display: none;
     }
   }
+  .btn_save {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+  }
   img.memo {
     transition: 0.5s;
+    border-radius: 10px;
     &:hover {
       cursor: pointer;
       opacity: 0.5;
-      box-shadow: inset 100px 100px rgba(0, 0, 0, 0.2);
+      /* box-shadow: inset 100px 100px rgba(0, 0, 0, 0.2); */
     }
   }
 }
@@ -78,17 +93,20 @@ input.update {
 }
 
 input.btn_delete {
-  background-color: red;
+  background-color: rgb(255, 200, 0);
+  font-weight: bold;
   color: white;
   border: none;
   outline: none;
 }
 
 @media screen and (max-width: 800px) {
-  footer,
+  footer {
+    width: 100%;
+  }
   header,
   section.main {
-    width: 95%;
+    width: 70%;
   }
 
   section.main {
