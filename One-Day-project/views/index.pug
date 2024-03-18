@@ -1,0 +1,77 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/css/main.css')
+  script(src="/js/student.js")
+  h1 청춘대학 소프트웨어 공학과
+  section.main 
+    div.aside.st
+      table.student
+        thead
+          tr.studnet
+            th 학번
+            th 이름
+        tbody     
+          each st in STUDENT
+            tr 
+              td= st.s_code
+              td= st.s_name
+    div.aside
+      if studentdetail&&studentdetail.length>0
+        each st in studentdetail
+          ul 
+            li 학번: #{st.s_code} 
+            li 이름: #{st.s_name}
+            li 학과: #{st.s_dep}
+            li 학년: #{st.s_grad}
+            li 전화번호: #{st.s_tel}
+            li 주소: #{st.s_addr}
+      else
+        ul 
+            li 학번:없음
+            li 이름: 
+            li 학과: 
+            li 학년: 
+            li 전화번호: 
+            li 주소: 
+      table.score
+        thead
+          tr 
+            th 과목명
+            th 점수
+          tbody   
+          if GRADE&&GRADE.length > 0
+            each grade in GRADE
+              tr 
+                td= grade.g_name
+                td= grade.g_score
+          else 
+            tr 
+              td 성적 정보가 없습니다.
+  section.sub 
+    div.search
+      div.length
+      form(action="/naver")
+        input(placeholder="학생 이름을 입력하세요.", name="search")
+        input.button(type="button" value="검색") 
+      if studentdetail && studentdetail.length > 0
+        each st in studentdetail
+          ul 
+            li 학번: #{st.s_code} 
+            li 이름: #{st.s_name}
+            li 학과: #{st.s_dep}
+            li 학년: #{st.s_grad}
+            li 전화번호: #{st.s_tel}
+            li 주소: #{st.s_addr}
+      div.length  
+        select.input(id="cars" name="cars" value="과목을 선택해 주세요")
+          option(value="과목을 선택해 주세요") 과목을 선택해 주세요
+          option(value="국어") 국어
+          option(value="데이터베이스") 데이터베이스
+          option(value="미술") 미술
+          option(value="소프트웨어공학") 소프트웨어공학
+          option(value="수학") 수학
+          option(value="영어") 영어
+          option(value="음악") 음악
+        input(type="text" placeholder="점수를 입력하세요")
+        input.button(type="button" value="저장")

@@ -48,15 +48,19 @@ router.get("/:seq/delete", async (req, res) => {
   return res.redirect("/");
 });
 
-router.post("/update/:seq", upLoad.single("m_image"), async (req, res) => {
-  const seq = req.params.seq;
-  const imageFile = req.file;
-  req.body.m_image = imageFile?.filename;
-  req.body.m_author = "loo919239@naver.com";
+router.post(
+  "/update/:seq",
+  upLoad.single("m_image"),
+  async (req, res) => {
+    const seq = req.params.seq;
+    const imageFile = req.file;
+    req.body.m_image = imageFile?.filename;
+    req.body.m_author = "loo919239@naver.com";
 
-  await MEMOS.update(req.body, { where: { m_seq: seq } });
-  return res.redirect("/");
-});
+    await MEMOS.update(req.body, { where: { m_seq: seq } });
+    return res.redirect("/");
+  }
+);
 
 router.get("/:seq/get", async (req, res) => {
   const seq = req.params.seq;
